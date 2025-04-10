@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Product from "./Product";
 import { shuffleArray } from "../../utils";
 import api from "../../api/axios";
+import { LoaderCircle } from "lucide-react";
 
 function NewProducts() {
   const [products, setProducts] = useState([]);
@@ -32,11 +33,7 @@ function NewProducts() {
           ))}
         </div>
       </div>
-    )) || (
-      <div className="w-full text-center p-5 text-neutral-950 font-bold text-lg">
-        Loading...
-      </div>
-    )
+    )) || <LoaderCircle size={30} className="animate-spin" />
   );
 }
 
