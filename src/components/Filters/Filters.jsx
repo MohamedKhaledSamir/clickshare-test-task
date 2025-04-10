@@ -2,16 +2,9 @@ import { FilterIcon } from "lucide-react";
 import Filter from "./Filter";
 import Range from "./Range";
 import { useState } from "react";
+import { categories } from "./data";
 
 function Filters() {
-  const categories = [
-    "Electronics",
-    "Fashion",
-    "Home & Garden",
-    "Sports",
-    "Toys",
-  ];
-
   const [showFilter, setShowFilter] = useState(false);
   return (
     <div className="bg-gray-100 py-10 max-lg:pb-2  h-fit  max-lg:bg-transparent px-10 max-lg:px-1 justify-center ">
